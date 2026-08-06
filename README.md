@@ -70,4 +70,6 @@ npm run dev     # http://localhost:3000
 | `npm run lint` | Run ESLint |
 
 Release details (version, date, download URL, file size) live in `lib/site.ts` — update
-them there at release time and the whole site follows.
+them there at release time and the whole site follows. The download button links straight
+to the tagged GitHub asset, so bumping `VERSION` there is enough as long as the installer
+keeps the `Sentinel_<version>_x64-setup.exe` name.

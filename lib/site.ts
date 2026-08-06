@@ -2,7 +2,7 @@
  * Single source of truth for everything the marketing copy repeats.
  * Swap these values at release time — nothing else needs to change.
  */
-const GITHUB = "https://github.com/sentinel-app/sentinel";
+const GITHUB = "https://github.com/sup-Udh/-sentinel-";
 
 export const site = {
   name: "Sentinel",
@@ -13,12 +13,21 @@ export const site = {
   github: GITHUB,
 } as const;
 
+const VERSION = "1.1.0";
+const INSTALLER = `Sentinel_${VERSION}_x64-setup.exe`;
+
 export const release = {
-  version: "1.4.2",
+  version: VERSION,
   date: "August 2026",
-  file: "Sentinel-Setup-1.4.2-x64.exe",
-  size: "24.8 MB",
-  download: `${GITHUB}/releases/latest/download/Sentinel-Setup-1.4.2-x64.exe`,
+  file: INSTALLER,
+  size: "2.8 MB",
+  /**
+   * Points at the tagged asset, not `/releases/latest/download/…`, because the
+   * installer name carries the version — the "latest" alias only resolves when
+   * the filename is stable across releases.
+   */
+  download: `${GITHUB}/releases/download/v${VERSION}/${INSTALLER}`,
+  releases: `${GITHUB}/releases`,
 } as const;
 
 export const nav = [

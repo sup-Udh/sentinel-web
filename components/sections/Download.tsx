@@ -82,6 +82,15 @@ export function Download() {
               />
               Download for Windows
             </Button>
+
+            <a
+              href={release.releases}
+              target="_blank"
+              rel="noreferrer"
+              className="relative mt-5 self-start text-[12px] text-ink/40 underline-offset-4 transition-colors hover:text-ink/70 hover:underline"
+            >
+              Checksums, older versions, and release notes on GitHub
+            </a>
           </motion.div>
         </Reveal>
 
