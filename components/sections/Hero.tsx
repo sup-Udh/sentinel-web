@@ -67,7 +67,9 @@ export function Hero() {
             {...line(0.56, reduced)}
             className="mt-10 flex flex-wrap items-center gap-3"
           >
-            <Button href="#download" size="lg" className="w-full sm:w-auto">
+            {/* Straight to the installer — the hero CTA shouldn't cost a scroll
+                and a second click before anything downloads. */}
+            <Button href={release.download} size="lg" className="w-full sm:w-auto">
               <Download
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5"
                 strokeWidth={2.2}
